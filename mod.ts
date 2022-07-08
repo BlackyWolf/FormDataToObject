@@ -1,0 +1,1 @@
+export { formDataToObject } from "./src/formDataToObject.ts";
