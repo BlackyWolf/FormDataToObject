@@ -9,11 +9,11 @@
   * @returns The value as either a number, boolean, or the passed value.
   */
 export function convertValue(value: any): number | boolean | string {
-  if (value === "true") return true;
-  
-  if (value === "false") return false;
+    if (value === "true") return true;
 
-  if (!isNaN(+value)) return +value;
+    if (value === "false") return false;
 
-  return value;
+    if (!isNaN(+value)) return +value;
+
+    return value;
 }
