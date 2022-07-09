@@ -56,7 +56,7 @@ Deno.test("convertValue - Zero value string does not convert to boolean", () => 
     assert(actualValue !== true);
 });
 
-Deno.test("convertValue - One value does not convert to boolean", () => {
+Deno.test("convertValue - One value string does not convert to boolean", () => {
     // Assign
     const value = "1";
 
