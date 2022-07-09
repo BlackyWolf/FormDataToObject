@@ -1,1 +1,1 @@
-export { formDataToObject } from "./src/formDataToObject.ts";
+export * from "./src/mod.ts";

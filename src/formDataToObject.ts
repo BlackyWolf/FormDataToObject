@@ -1,10 +1,9 @@
-import { buildProperty } from "./utilities/buildProperty.ts";
-import { convertValue } from "./utilities/convertValue.ts";
+import { buildProperty, convertValue } from "./utilities/mod.ts";
 
 /**
  * Converts the `FormData` to an object. The generic type is for convenience
  * when using the returned value.
- * 
+ *
  * @typeParam TModel - The type of model being built and returned.
  *
  * @param formData - The form field data used to build the object.
