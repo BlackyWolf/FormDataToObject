@@ -28,7 +28,7 @@ In order for the package to construct the model object from the form data correc
 ```
 
 * Field names for arrays holding primitive values must use empty square braces, e.g. `tags[]`. Using the same name for multiple fields will put those field values in the same property array.
-* Field names for arrays holding complex objects must include the index number ov the object to assign properties to. Failing to put the correct index number will result in strange objects being created or values overriding existing objects and not being assigned to the correct object. At the moment, indexed fields must go in numeric order starting with index `0` and incrementing by one. Order of indexed fields may become less of an issue in the future, but for now this is required.
+* Field names for arrays holding complex objects must include the index number of the object to assign properties to. Failing to put the correct index number will result in strange objects being created or values overriding existing objects and not being assigned to the correct object. At the moment, indexed fields must go in numeric order starting with index `0` and incrementing by one. Order of indexed fields may become less of an issue in the future, but for now this is required.
 * Accessing properties of complex objects within an array can be done by using the following naming convention: `<input name="user.emails[0].displayName" />`
 
 For example the following Form/FormData object is converted into the following model object:
