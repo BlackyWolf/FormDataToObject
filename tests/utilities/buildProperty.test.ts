@@ -1,5 +1,5 @@
 // deno-lint-ignore-file no-explicit-any
-import { assert, assertArrayIncludes, assertEquals, assertExists, buildProperty } from "../deps.ts";
+import { assertArrayIncludes, assertEquals, assertExists, buildProperty } from "../deps.ts";
 
 Deno.test("buildProperty - Adds primitive value to model property", () => {
     // Assign
