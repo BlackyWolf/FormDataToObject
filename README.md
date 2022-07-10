@@ -12,6 +12,32 @@ This package can only be used to create complex objects, that is to say, objects
 
 At the moment primitive types are limited to `number`, `boolean`, and `string`.
 
+### Importing
+
+This package can be imported from the following URL, though we recommend using the versioned URL to prevent breaking changes:
+
+```ts
+import { formDataToObject } from "https://deno.land/x/form_data_to_object/mod.ts";
+```
+
+### Using
+
+Using the package is as simple as passing the the `FormData` object to the `formDataToObjectMethod<TModel>()` function along with the model type you want to use for intellisense:
+
+```ts
+import { formDataToObject } from "https://deno.land/x/form_data_to_object/mod.ts";
+
+async get(request: Request) {
+    const formData = await request.formData();
+
+    const newFood = formDataToObject<Food>(formData);
+
+    // ...
+}
+```
+
+### Naming Convention
+
 In order for the package to construct the model object from the form data correctly, following the correct naming convention for field names is required:
 
 * Field names are case-sensitive as JS property names are case-sensitive
@@ -144,6 +170,8 @@ FormData {
   }
 }
 ```
+
+### Current Problems
 
 As you can see, the order of index numbers within the HTML form matter. At this time, there is no logic to handle higher numbered indices. For example ordering complex array field names in the following order:
 
