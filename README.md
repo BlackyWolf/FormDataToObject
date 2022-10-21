@@ -14,7 +14,7 @@ At the moment primitive types are limited to `number`, `boolean`, and `string`.
 
 ### Importing
 
-This package can be imported from the following URL, though we recommend using the versioned URL to prevent breaking changes:
+This package can be imported from the following URL, though it is recommended to use the versioned URL to prevent breaking changes:
 
 ```ts
 import { formDataToObject } from "https://deno.land/x/form_data_to_object/mod.ts";
