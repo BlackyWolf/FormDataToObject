@@ -11,6 +11,17 @@ Deno.test("convertValue - Number string converts to number", () => {
     assert(!isNaN(+actualValue));
 });
 
+Deno.test("convertValue - Empty string converts to empty string", () => {
+    // Assign
+    const value = "";
+
+    // Act
+    const actualValue = convertValue(value);
+
+    // Assert
+    assert(actualValue === "");
+});
+
 Deno.test("convertValue - Fractal string does not convert to number", () => {
     // Assign
     const value = "1/5";

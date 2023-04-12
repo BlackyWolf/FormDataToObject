@@ -13,6 +13,8 @@ export function convertValue(value: any): number | boolean | string {
 
     if (value === "false") return false;
 
+    if (value === "") return "";
+
     if (!isNaN(+value)) return +value;
 
     return value;
